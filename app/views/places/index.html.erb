@@ -1,13 +1,21 @@
-<h1>Places</h1>
+<div class = "container-lg">
+<div class="row">
+  <div class="col-sm-9">
+    <h1>Places</h1>
+  </div>
+  <div>
+    <% if @current_user != nil %>
+      <a href="/places/new/" class="btn btn-success">New Place</a>
+    <% end %>
+  </div>
+</div>
 
-<ul>
+<p></p>
+
+  <div class = "pt-3">
   <% for place in @places %>
-    <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
+    <a href="/places/<%= place["id"] %>"><%= place["name"] %></a>
   <% end %>
-</ul>
-
-<p>
-  <% if @current_user != nil %>
-    <a href="/places/new">New Place</a>
-  <% end %>
-</p>
+  </div>
+  
+</div>

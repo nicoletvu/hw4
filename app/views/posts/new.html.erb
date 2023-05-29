@@ -1,22 +1,59 @@
-  <h1>New Post</h1>
+  <div class = "container-lg">
+  
+    <h2>New Post</h2>
+  
+    <div class = "pt-3">
 
-  <%= form_with :model => @post do |form| %>
-    <%= form.hidden_field "place_id" %>
-    <p>
-      <%= form.label "title" %>
-      <%= form.text_field "title" %>
-    </p>
-    <p>
-      <%= form.label "description" %>
-      <%= form.text_field "description" %>
-    </p>
-    <p>
-      <%= form.label "posted_on" %>
-      <%= form.date_field "posted_on" %>
-    </p>
-    <p>
-      <%= form.hidden_field "user_id" %>
-      <%= form.submit %>
-    </p>
-  <% end %>
+      <%= form_with :model => @post do |form| %>
+        <%= form.hidden_field "place_id" %>
 
+        <!--
+
+        <div class="mb-3">
+          <label for="title" class="form-label">Post Title</label>
+          <input type="text" class="form-control" id="title">
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <input type="text" class="form-control" id="description">
+        </div>
+
+        <div class="mb-3">
+          <label for="posted_on" class="form-label">Posted On</label>
+          <input type="date" class="form-control" id="posted_on">
+        </div>
+
+     
+        <p>
+          <%= form.hidden_field "user_id" %>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </p>
+
+           -->
+
+        <p>
+          <%= form.label "title" %>
+          <%= form.text_field "title" %>
+        </p>
+        <p>
+          <%= form.label "description" %>
+          <%= form.text_field "description" %>
+        </p>
+        <p>
+          <%= form.label "posted_on" %>
+          <%= form.date_field "posted_on" %>
+        </p>
+        <p>
+          <%= form.hidden_field "user_id" %>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Create Post</button>
+          </div>
+        </p>
+      <% end %>
+      
+    </div>
+
+</div>
