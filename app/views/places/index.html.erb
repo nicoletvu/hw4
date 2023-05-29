@@ -14,7 +14,9 @@
 
   <div class = "pt-3">
   <% for place in @places %>
+  <li>
     <a href="/places/<%= place["id"] %>"><%= place["name"] %></a>
+  </li>
   <% end %>
   </div>
   

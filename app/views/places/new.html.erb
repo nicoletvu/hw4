@@ -5,10 +5,12 @@
      <div class = "pt-3">
 
       <%= form_with :model => @place do |form| %>
-        <p>
-          <%= form.label "name" %>
-          <%= form.text_field "name" %>
-        </p>
+
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="place[name]">
+        </div>
+
         <p>
           <div class="col-auto">
             <button type="submit" class="btn btn-primary">Create Place</button>
