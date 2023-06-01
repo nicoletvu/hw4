@@ -20,15 +20,16 @@
         <h4><%= post["posted_on"] %></h4>
         <p><%= post["description"] %></p>
   
+      <% if post.uploaded_image.attached? %>
+        <img src="<%= url_for(post.uploaded_image)%>" class = "img-fluid">
+      <% end %>
+
+
       </div>
     <% end %>
   </div>
 
 <% end %>
-  <!--
-  <p>
-    <a href="/places" class="btn btn-success" >Back to All Places</a>
-  </p>
-  -->
+
 
 </div>
