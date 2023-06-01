@@ -7,17 +7,24 @@
     <% end %>
   </p>
 
+  <% if @posts == nil %>
+
+  You have no posts for this place! Create a new post using the button above.
+
+  <% else %>
+
   <div class = "row gx-5 pt-3">
     <% for post in @posts %>
        <div class = "col-lg-4 row-gap-5">
-        <img src="<%= url_for(post.uploaded_image)%>" class = "img-fluid">
         <h3><%= post["title"] %></h3>
         <h4><%= post["posted_on"] %></h4>
         <p><%= post["description"] %></p>
+  
       </div>
     <% end %>
   </div>
 
+<% end %>
   <!--
   <p>
     <a href="/places" class="btn btn-success" >Back to All Places</a>

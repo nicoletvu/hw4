@@ -7,17 +7,30 @@
       <%= form_with :model => @place do |form| %>
 
         <div class="mb-3">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" name="place[name]">
+          <%= form.label "name", :class => "form-label" %>
+          <%= form.text_field "name", :class => "form-control" %>
         </div>
-
+  
         <p>
-          <div class="col-auto">
-            <button type="submit" class="btn btn-primary">Create Place</button>
-          </div>
+          <%= form.submit "Create Post", :class => "btn btn-primary" %>
         </p>
+        
       <% end %>
 
     </div>
 
   </div>
+
+  <!--
+
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="place[name]">
+        </div>
+
+
+
+
+  
+  
+  -->

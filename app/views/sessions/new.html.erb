@@ -6,33 +6,19 @@
 
     <%= form_with :url => "/sessions" do |form| %>
     
-    <!--     
       <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input type="text" class="form-control" id="username" name="user[username]">
+          <%= form.label "username", :class => "form-label" %>
+          <%= form.text_field "username", :class => "form-control" %>
       </div>
 
       <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" name="user[password]">
+          <%= form.label "password", :class => "form-label" %>
+          <%= form.password_field "password", :class => "form-control" %>
       </div>
-      -->
 
-      <p>
-        <%= form.label "username" %>
-        <%= form.text_field "username" %>
-      </p>
 
-      <p>
-        <%= form.label "password" %>
-        <%= form.password_field "password" %>
-      </p>
+      <%= form.submit "Login", :class => "btn btn-primary" %>
 
-      <p>
-        <div class="col-auto">
-          <button type="submit" class="btn btn-primary">Login</button>
-        </div>
-      </p>
     <% end %>
 
   </div>

@@ -5,44 +5,32 @@
     <div class = "pt-3">
 
       <%= form_with :model => @post do |form| %>
+        
         <%= form.hidden_field "place_id" %>
 
-        <!--
         <div class="mb-3">
           <%= form.label "title", :class => "form-label" %>
-          <%= form.file_field "title", :class => "form-control"%>
-        </div>
-        -->
-        
-          <label for="title" class="form-label">Post Title</label>
-          <input type="text" class="form-control" id="title" name="post[title]">
+          <%= form.text_field "title", :class => "form-control" %>
         </div>
 
-        <div class="mb-3">
-          <%= form.label "uploaded_image", :class => "form-label" %>
-          <%= form.file_field "uploaded_image", :class => "form-control" %>
-        </div>
-        
-        <div class="mb-3">
-          <label for="description" class="form-label">Description</label>
-          <input type="text" class="form-control" id="description" name="post[description]">
-        </div>
+         <div class="mb-3">
+          <%= form.label "description", :class => "form-label" %>
+          <%= form.text_field "description", :class => "form-control" %>
+        </div>     
 
-        <div class="mb-3">
-          <label for="posted_on" class="form-label">Posted On</label>
-          <input type="date" class="form-control" id="posted_on" name="post[posted_on]">
-        </div>
+         <div class="mb-3">
+          <%= form.label "posted on", :class => "form-label" %>
+          <%= form.date_field "posted_on", :class => "form-control" %>
+        </div>  
      
-        <p>
-          <%= form.hidden_field "user_id" %>
-        </p>
+        <%= form.hidden_field "user_id" %>
         
-        <div class="col-auto">
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
+        <%= form.submit "Create Post", :class => "btn btn-primary" %>
 
       <% end %>
       
     </div>
 
-</div>
+</div>  
+  
+  
