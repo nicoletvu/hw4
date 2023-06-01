@@ -7,11 +7,22 @@
       <%= form_with :model => @post do |form| %>
         <%= form.hidden_field "place_id" %>
 
+        <!--
         <div class="mb-3">
+          <%= form.label "title", :class => "form-label" %>
+          <%= form.file_field "title", :class => "form-control"%>
+        </div>
+        -->
+        
           <label for="title" class="form-label">Post Title</label>
           <input type="text" class="form-control" id="title" name="post[title]">
         </div>
 
+        <div class="mb-3">
+          <%= form.label "uploaded_image", :class => "form-label" %>
+          <%= form.file_field "uploaded_image", :class => "form-control" %>
+        </div>
+        
         <div class="mb-3">
           <label for="description" class="form-label">Description</label>
           <input type="text" class="form-control" id="description" name="post[description]">
