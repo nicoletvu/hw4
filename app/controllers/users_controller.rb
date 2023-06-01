@@ -11,5 +11,6 @@ class UsersController < ApplicationController
     @user["password"] = BCrypt::Password.create(params["user"]["password"])
     @user.save
     redirect_to "/places"
+    flash["notice"] = "Sign-up successful! Please log in with your new credentials."
   end
 end
